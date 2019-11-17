@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "4bf4085d-026a-47b0-a1e0-1c0248b45446",
+		"name": "ONG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Donation",
+			"item": [
+				{
+					"name": "don/All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk0NzY3NywiZXhwIjoxNTczOTQ4Mjc3fQ.vFQUgrxjtMYSL2_pqVRkMfrNlRiWDDsox9-DI67ccOA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/don/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"don",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "don/New",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk0NjcyOSwiZXhwIjoxNTczOTQ3MzI5fQ.Npe1TfEFmCDdGgvkV8JtiRy5bHnQn8rSMnRFlmM3rIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "donid",
+									"value": "DON001",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "dinero",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "effectivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/don/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"don",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "don/Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk0NzQyMiwiZXhwIjoxNTczOTQ4MDIyfQ.S9tDT2AkPmU_t8gybHGSV0Ik0o-0VGyw7J_bj9PI93M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "descripcion",
+									"value": "dinero",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "effectivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/don/update/:donid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"don",
+								"update",
+								":donid"
+							],
+							"variable": [
+								{
+									"key": "donid",
+									"value": "5dd085b06f253917b80aae89"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "don/Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk0NzY3NywiZXhwIjoxNTczOTQ4Mjc3fQ.vFQUgrxjtMYSL2_pqVRkMfrNlRiWDDsox9-DI67ccOA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/don/del/:donid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"don",
+								"del",
+								":donid"
+							],
+							"variable": [
+								{
+									"key": "donid",
+									"value": "5dd085b06f253917b80aae89"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "don/One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk0Nzg4NiwiZXhwIjoxNTczOTQ4NDg2fQ.paf376ydNOPKeLdiNsxQ5nbEI6t6Vj7U56okcJOkNtc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/don/donation/:donid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"don",
+								"donation",
+								":donid"
+							],
+							"variable": [
+								{
+									"key": "donid",
+									"value": "5dd085b06f253917b80aae89"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "prd/All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk2MjUyNywiZXhwIjoxNTczOTYzMTI3fQ.yJoDhPJjk0M9eeSvjB4wqqT1A1k7mz3DoyagOv595Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/prd/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"prd",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prd/New",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk2MjUyNywiZXhwIjoxNTczOTYzMTI3fQ.yJoDhPJjk0M9eeSvjB4wqqT1A1k7mz3DoyagOv595Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prdid",
+									"value": "PRD004",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Collares",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/prd/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"prd",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prd/Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk2MjUyNywiZXhwIjoxNTczOTYzMTI3fQ.yJoDhPJjk0M9eeSvjB4wqqT1A1k7mz3DoyagOv595Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ajustar",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "SUB",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/prd/update/:prdid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"prd",
+								"update",
+								":prdid"
+							],
+							"variable": [
+								{
+									"key": "prdid",
+									"value": "5dd08fcdf0c4ff1d801f95a4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prd/Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk2MjUyNywiZXhwIjoxNTczOTYzMTI3fQ.yJoDhPJjk0M9eeSvjB4wqqT1A1k7mz3DoyagOv595Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/prd/del/:prdid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"prd",
+								"del",
+								":prdid"
+							],
+							"variable": [
+								{
+									"key": "prdid",
+									"value": "5dd08d502c8a280f3c2cf91c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prd/One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGQwODAyOTNmNTE0NDIyMjQ1OTI0ZGUiLCJlbWFpbCI6InJvbWVyb2NhcmxvczA4MDVAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sImlhdCI6MTU3Mzk2MjUyNywiZXhwIjoxNTczOTYzMTI3fQ.yJoDhPJjk0M9eeSvjB4wqqT1A1k7mz3DoyagOv595Qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/prd/product/:prdid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"prd",
+								"product",
+								":prdid"
+							],
+							"variable": [
+								{
+									"key": "prdid",
+									"value": "5dd08fcdf0c4ff1d801f95a4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Security/Signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "romerocarlos0805@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security/Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "romerocarlos0805@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "pswd",
+							"value": "P@ssw0rd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
